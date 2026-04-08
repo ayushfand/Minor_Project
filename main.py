@@ -4,6 +4,7 @@ from src.build_graph import build_product_reviews, build_user_graph, build_bipar
 from src.pagerank import compute_pagerank
 
 import pandas as pd
+import os
 
 def main():
     file_path = "data/Electronics.txt"
@@ -38,7 +39,7 @@ def main():
         "userId": list(pagerank_scores.keys()),
         "pagerank": list(pagerank_scores.values())
     })
-
+    os.makedirs("output", exist_ok=True)
     pr_df.to_csv("output/submission.csv", index=False)
 
     print("Saved to output/submission.csv")

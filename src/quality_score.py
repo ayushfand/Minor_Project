@@ -2,6 +2,7 @@ import pandas as pd
 from tqdm import tqdm
 from sentence_transformers import SentenceTransformer, util
 import re
+import os
 
 # Load lightweight model
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -85,5 +86,6 @@ if __name__ == "__main__":
 
     df = compute_quality(df)
 
+    os.makedirs("../output", exist_ok=True)
     df.to_csv("../output/quality_scores.csv", index=False)
     print("Done!")

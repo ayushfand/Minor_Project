@@ -24,6 +24,28 @@ This is an independent analysis pipeline focused entirely on the written content
 
 Computed scores are then evaluated against the dataset and exported to `output/quality_scores.csv`.
 
+## Folder Structure
+
+When cloning this repository, maintain the following directory layout. *(Note: Some folders are intentionally ignored by Git due to file sizes, so you must create them locally or rely on scripts to auto-generate them).*
+
+```text
+Minor_Project/
+│
+├── Data/                   # (Not tracked in Git) Place raw datasets here, e.g., 'Data/Electronics.txt'
+├── output/                 # (Not tracked in Git) Auto-created during run. Output CSV files are dumped here.
+├── src/                    # Internal logic and helper scripts
+│   ├── build_graph.py      # Functions for User/Product NetworkX Graphs 
+│   ├── load_data.py        # Raw data parser
+│   ├── pagerank.py         # Centrality calculation
+│   ├── preprocess.py       # Data cleaning logic
+│   └── quality_score.py    # Standalone NLP processing pipeline
+│
+├── .gitignore              # Security and size limits config
+├── main.py                 # Main entry point for the Graph Modeling script
+├── README.md               # Project documentation
+└── requirements.txt        # Python library dependencies
+```
+
 ## Setup & Running
 1. Make sure required libraries are installed:
    ```bash
