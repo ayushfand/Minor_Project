@@ -1,0 +1,23 @@
+{
+  "name": "minor_project",
+  "version": "1.0.0",
+  "description": "This project analyzes product review datasets (like Amazon product reviews) to evaluate user influence via network graph theory and to calculate the content quality of individual reviews using Natural Language Processing.",
+  "main": "qwert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushfand/Minor_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushfand/Minor_Project/issues"
+  },
+  "homepage": "https://github.com/ayushfand/Minor_Project#readme",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

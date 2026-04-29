@@ -7,10 +7,10 @@ import pandas as pd
 import os
 
 def main():
-    file_path = "data/Electronics.txt"
+    file_path = "D:/minorproj/code/anti/dataset/Electronics.json"
 
     # Step 1: Load data
-    df = load_sample_data(file_path, max_records=20000)
+    df = load_sample_data(file_path, max_records=100000)
 
     # Step 2: Preprocess
     df = preprocess(df)
